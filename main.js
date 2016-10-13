@@ -27,16 +27,11 @@ if(navigator.mediaDevices.getUserMedia === undefined) {
   navigator.mediaDevices.getUserMedia = promisifiedOldGUM;
 }
 
-var canvas = document.getElementById('video');
-var ctx = canvas.getContext("2d");
-var canvasWidth = canvas.clientWidth;
-var canvasHeigth = canvas.clientHeight;
-
 var constraints = { 
   audio: false, 
   video: { 
     width: { ideal: 500 },
-    height: { ideal: 500 },
+    height: { ideal: 1000 },
     facingMode: {
       exact: "environment"
     }
@@ -45,22 +40,12 @@ var constraints = {
 
 navigator.mediaDevices.getUserMedia(constraints)
 .then(function(stream) {
-  var video = document.createElement('video');
+  var video = document.getElementById('video');
   video.src = window.URL.createObjectURL(stream);
 
   video.onloadedmetadata = function(e) {
     video.play();
   };
-
-  video.addEventListener('play', function (e) {
-    var $this = this; //cache
-    (function loop() {
-        if (!$this.paused && !$this.ended) {
-          ctx.drawImage($this, 0, 0);
-          setTimeout(loop, 1000 / 30); // drawing at 30fps
-        }
-    })();
-  }, 0);
 })
 .catch(function(err) {
   console.log(err.name + ": " + err.message);
