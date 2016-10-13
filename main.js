@@ -38,9 +38,10 @@ var constraints = {
   } 
 };
 
+var video = document.getElementById('video');
+
 navigator.mediaDevices.getUserMedia(constraints)
 .then(function(stream) {
-  var video = document.getElementById('video');
   video.src = window.URL.createObjectURL(stream);
 
   video.onloadedmetadata = function(e) {
@@ -50,3 +51,10 @@ navigator.mediaDevices.getUserMedia(constraints)
 .catch(function(err) {
   console.log(err.name + ": " + err.message);
 });
+
+function snapShot(){
+  var canvas = document.createElement('canvas');
+  var ctx = canvas.getContext('2d'); 
+  ctx.drawImage(video, 0, 0, video.width, video.height);
+  return canvas;
+}
