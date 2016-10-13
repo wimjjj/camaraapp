@@ -1,0 +1,36 @@
+body{
+
+}
+
+#background{
+    background: url("../images/bees.jpg") no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.container-fluid  {
+    background-color: rgba(0,0,0,0.8);
+    height: 100vh;
+}
+
+.col-xs-4{
+    text-align: center;
+}
+
+#video{
+    /*background: green;*/
+    width: 100%;
+    height: 85vh;
+    margin-top: 16px;
+    border-radius: 1%;
+}
+
+#scanButton{
+    background: url("../images/glass2.png");
+    background-size: cover;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    margin: 2vh;
+    outline: 0;
+}
