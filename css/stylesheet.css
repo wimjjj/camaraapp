@@ -41,3 +41,25 @@ body{
     border-radius: 5px;
     overflow: hidden;
 }
+
+#image{
+    text-align: center;
+    background: url("../images/zonnebloem1.png") no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+
+#score{
+    text-align: center;
+    font-size: 100px;
+    color: white;
+    height: 10vh;
+}
+
+
+#title{
+    text-align: center;
+    font-size: 150px;
+    color: white;
+    height: 10vh;
+}
