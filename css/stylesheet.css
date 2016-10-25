@@ -25,18 +25,21 @@ body{
 }
 
 #scanButton{
-    background: url("../images/glass2.png");
+    background: url("../images/scanButton2.png");
     background-size: cover;
-    width: 10vh;
-    height: 10vh;
-    border-radius: 50%;
+    width: 12vh;
+    height: 12vh;
+    border: none;
     margin: 2vh;
     outline: 0;
 }
 
+#scanButton:active{
+}
+
 .video-border {
     width: 100%;
-    height: 85vh;
+    height: 80vh;
     margin-top: 16px;
     border-radius: 5px;
     overflow: hidden;
@@ -46,7 +49,7 @@ body{
     text-align: center;
     background: url("../images/zonnebloem1.png") no-repeat;
     background-size: cover;
-    height: 60vh;
+    height: 63vh;
 }
 
 #score{
@@ -63,3 +66,20 @@ body{
     color: white;
     height: 10vh;
 }
+
+#backButton {
+    width: 12vh;
+    height: 12vh;
+    background: url("../images/backButton1.png") no-repeat;
+    background-size: cover;
+    border: none;
+    margin: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#backButtonContainer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
