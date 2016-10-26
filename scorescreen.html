@@ -7,6 +7,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
     <title></title>
 </head>
 <body>
@@ -19,8 +21,14 @@
                 </div>
                 <div class="col-xs-12" id="image">
                 </div>
-                <div class="col-xs-12" id="score">
-                    5 Punten
+                <div class="col-xs-12 content-center" id="score">
+                    <div id="piontsContainer">
+                        <div class="piont"></div>
+                        <div class="piont"></div>
+                        <div class="piont"></div>
+                        <div class="piont"></div>
+                        <div class="piont"></div>
+                    </div>
                 </div>
             </div>
             <!-- <div class="row">
@@ -30,8 +38,12 @@
                     </button>
                 </div>
             </div> -->
-            <div id="backButtonContainer">
-                <button onclick="loadScanPage()" id="backButton">
+            <div class="buttonContainer half-width">
+                <button onclick="loadScanPage()" class="button" id="backButton">
+                </button>
+            </div>
+            <div class="buttonContainer half-width">
+                <button onclick="loadHighScores()" class="button" id="nextButton">
                 </button>
             </div>
         </div>

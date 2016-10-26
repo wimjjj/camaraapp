@@ -5,3 +5,7 @@ function loadScoreScreen(){
 function loadScanPage(){
 	window.location.href = 'index.html';
 }
+
+function loadHighScores(){
+	window.location.href = 'scores.html';
+}
